@@ -1,14 +1,9 @@
-# import kagglehub
-# # Download latest version
-# path = kagglehub.dataset_download("unsdsn/world-happiness")
-# print("Path to dataset files:", path)
-
 import pandas as pd  
 import matplotlib.pyplot as plt  
 import seaborn as sns  
 import sklearn 
 from sklearn.metrics import mean_absolute_error, r2_score
-print(sklearn.__version__)
+
 # Load the dataset
 df = pd.read_csv("data/world_happiness.csv")  
 
@@ -41,4 +36,3 @@ model.fit(X_train, y_train)
 y_pred = model.predict(X_test)  
 print("Model Accuracy:", model.score(X_test, y_test))  
 print("RMSE:", mean_squared_error(y_test, y_pred))
-
