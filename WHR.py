@@ -20,10 +20,10 @@ df.rename(columns={'Happiness.Score': 'Happiness_Score'}, inplace=True)
 df_numeric = df.select_dtypes(include=['float64', 'int64'])
 
 # Correlation heatmap
-# plt.figure(figsize=(10, 6))
-# sns.heatmap(df_numeric.corr(), annot=True, cmap='coolwarm')
-# plt.title("Correlation Between Happiness and Other Factors")
-# plt.show()
+plt.figure(figsize=(10, 6))
+sns.heatmap(df_numeric.corr(), annot=True, cmap='coolwarm')
+plt.title("Correlation Between Happiness and Other Factors")
+plt.savefig('images/WHPlot.png', format='png')
 
 from sklearn.model_selection import train_test_split  
 from sklearn.linear_model import LinearRegression  
