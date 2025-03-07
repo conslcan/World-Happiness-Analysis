@@ -10,7 +10,7 @@ import sklearn
 from sklearn.metrics import mean_absolute_error, r2_score
 print(sklearn.__version__)
 # Load the dataset
-df = pd.read_csv("world_happiness.csv")  
+df = pd.read_csv("data/world_happiness.csv")  
 
 # Print data types to check for non-numeric columns
 # print(df.dtypes)
